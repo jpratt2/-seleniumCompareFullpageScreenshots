@@ -18,6 +18,6 @@ URLs for your test can be put in the [src/test/java/URLs.java file](https://gith
 Basic Selenium set up can be put in [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
 
 Syntax for a full-page screenshot:
-`Screenshot.fullpage(driver);' where "driver" is a recent Firefox driver
+`Screenshot.fullpage(driver);` where "driver" is a recent Firefox driver
 
 The file name will be the URL (with certain forbidden characters replaced by a dash -).
