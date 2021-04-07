@@ -7,10 +7,10 @@ It uses Selenium 4 to take full-page screenshots in Firefox, and it compares the
 
 It comes with 2 ready-made tests that can be run in Maven:
 
-##Create baseline images and put them in the "expected" folder at the root of the project  
+## Create baseline images and put them in the "expected" folder at the root of the project  
 `mvn "-Dtest=A*" test`  
 
-##Create test images and put them in the "observed" folder.  
+## Create test images and put them in the "observed" folder.  
 `mvn "-Dtest=B*" test`  
 If there is any discrepancy between the expected and obverved images, a diff image with the difference highlighted in red will be put in the "diffs" folder.
 
