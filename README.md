@@ -10,7 +10,7 @@ It comes with 2 ready-made tests that can be run in Maven:
 ## Create baseline images and put them in the "expected" folder at the root of the project  
 `mvn "-Dtest=A*" test`  
 
-## Create test images and put them in the "observed" folder.  
+## Run a test and put images in the "observed" folder.  
 `mvn "-Dtest=B*" test`  
 
 **If there is any discrepancy between the expected and obverved images, a diff image with the difference highlighted in red will be put in the "diffs" folder.**
@@ -21,4 +21,4 @@ Basic Selenium set up can be put in [src/test/java/Setup.java](https://github.co
 Syntax for a full-page screenshot:
 `Screenshot.fullpage(driver);` where "driver" is a recent Firefox driver
 
-The file name will be the URL (with forbidden characters replaced by a dash -).
+**The file name will be the URL (with forbidden characters replaced by a dash).**
