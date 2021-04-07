@@ -17,3 +17,8 @@ This will create test images and put them in the "observed" folder. If there is 
 
 URLs for your test can be put in the [src/test/java/URLs.java file](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/URLs.java).  
 Basic Selenium set up can be put in [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
+
+Syntax for a full-page screenshot:
+`Screenshot.fullpage(driver);' where "driver" is a recent Firefox driver
+
+The file name will be the URL (with certain forbidden characters replaced by a dash-).
