@@ -7,13 +7,12 @@ It uses Selenium 4 to take full-page screenshots in Firefox, and it compares the
 
 It comes with 2 ready-made tests that can be run in Maven:
 
+##Create baseline images and put them in the "expected" folder at the root of the project
 `mvn "-Dtest=A*" test`
 
-This will create baseline images and put them in the "expected" folder
-
+##Create test images and put them in the "observed" folder.
 `mvn "-Dtest=B*" test`
-
-This will create test images and put them in the "observed" folder. If there is any discrepancy, a diff image with the difference highlighted in red will be put in the "diffs" folder.
+If there is any discrepancy between the expected and obverved images, a diff image with the difference highlighted in red will be put in the "diffs" folder.
 
 URLs for your test can be put in the [src/test/java/URLs.java file](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/URLs.java).  
 Basic Selenium set up can be put in [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
@@ -21,4 +20,4 @@ Basic Selenium set up can be put in [src/test/java/Setup.java](https://github.co
 Syntax for a full-page screenshot:
 `Screenshot.fullpage(driver);' where "driver" is a recent Firefox driver
 
-The file name will be the URL (with certain forbidden characters replaced by a dash-).
+The file name will be the URL (with certain forbidden characters replaced by a dash -).
