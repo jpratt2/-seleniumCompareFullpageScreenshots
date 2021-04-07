@@ -1,5 +1,6 @@
 # Selenium Compare Fullpage Screenshots
-for Java and Maven
+*for Java and Maven*
+
 
 This project is useful for site monitoring on prod for any visual change.
 
@@ -17,5 +18,5 @@ This will create test images and put them in the "observed" folder
 
 If there is any discrepancy, a diff image with the difference highlighted in red will be put in the "diffs" folder.
 
-URLs for your test can be put in the [src/test/java/URLs.java file](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/URLs.java).
+URLs for your test can be put in the [src/test/java/URLs.java file](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/URLs.java).  
 Basic Selenium set up can be put in [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
