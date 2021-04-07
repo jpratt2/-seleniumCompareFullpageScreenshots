@@ -3,9 +3,11 @@
 
 
 This project is useful for site monitoring on prod for any visual change.  
+
 It uses Selenium 4 to take full-page screenshots in Firefox, and it compares them against a baseline image to generate a diff image for any mismatch.
 
-It comes with 2 ready-made tests that can be run in Maven:
+---
+It comes with 2 ready Maven tests:
 
 ## Create baseline images and put them in the "expected" folder at the root of the project  
 `mvn "-Dtest=A*" test`  
