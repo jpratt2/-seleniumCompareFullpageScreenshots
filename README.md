@@ -8,7 +8,7 @@ It uses Selenium 4 to take full-page screenshots in Firefox. It compares a basel
 
 ---
 
-It comes with 2 Maven commands ready for use:
+It comes with 2 test commands ready for Maven:
 
 ## Create baseline images and put them in the "expected" folder at the root of the project  
 `mvn "-Dtest=A*" test`  
@@ -32,9 +32,9 @@ Syntax to compare a full-page screenshot against the corresponding image in the 
 minimal options with project default values:  
 `Screenshot.compareImage(driver);`
  
-An acceptance level can be set with "pixelThreshold". This provides an acceptable difference in pixels that can still be considered a match.  
+An acceptance level can be set with a "pixelThreshold" value. This provides an acceptable difference in pixels that can still be considered a match.  
 For example:
-`compareImage(driver, pixelThreshold)`
+`compareImage(driver, 100)`
 
 **The file name will be the URL (with forbidden characters replaced by a dash).**
 
