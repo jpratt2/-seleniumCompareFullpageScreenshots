@@ -13,8 +13,9 @@ It comes with 2 Maven commands ready for use:
 ## Create baseline images and put them in the "expected" folder at the root of the project  
 `mvn "-Dtest=A*" test`  
 
-## Run a test and put images in the "observed" folder.  
+## Create current images in the "observed" folder and diffs (if any) in the "diffs folder.  
 `mvn "-Dtest=B*" test`  
+
 **If there is any discrepancy between the expected and obverved images, a diff image with the difference highlighted in red will be put in the "diffs" folder.**
 
 URLs for your test can be put in the [src/test/java/URLs.java file](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/URLs.java).  
@@ -24,14 +25,14 @@ Basic Selenium set up can be put in [src/test/java/Setup.java](https://github.co
 Syntax for a full-page screenshot:
 minimal options with project default values:
 `Screenshot.fullpage(driver);` 
-Additional options:
+Additional options are available
 
 
 Syntax to compare a full-page screenshot against the corresponding image in the "expected" folder:
 minimal options with project default values:
 `Screenshot.compareImage(driver);'
  
-Additional options:
+Additional options are available such as "pixelThreshold".
 
 **The file name will be the URL (with forbidden characters replaced by a dash).**
 
