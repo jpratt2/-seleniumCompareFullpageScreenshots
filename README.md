@@ -22,19 +22,24 @@ URLs for your test should be put here: [src/test/java/URLs.java file](https://gi
 
 Basic Selenium set up: [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
 
-Syntax for a full-page screenshot:
-minimal options with project default values:  
+Basic syntax for a full-page screenshot:  
 `Screenshot.fullpage(driver);` 
-Additional options are available
 
-
-Syntax to compare a full-page screenshot against the corresponding image in the "expected" folder:
-minimal options with project default values:  
+Basic syntax to compare a full-page screenshot against the corresponding image in the "expected" folder:  
 `Screenshot.compareImage(driver);`
  
-An acceptance level can be set with a "pixelThreshold" value. This provides an acceptable difference in pixels that can still be considered a match.  
+Additionally, the acceptance level can be set with a "pixelThreshold" value. 
 For example:
-`compareImage(driver, 100)`
+`Screenshot.compareImage(driver, 100)`
 
 **The file name will be the URL (with forbidden characters replaced by a dash).**
+
+An example of use:
+```
+            driver.get(URL);
+            Thread.sleep(3000);//wait for the page to fully load
+            Screenshot.compareImage(driver);
+```
+I recommend a delay for the page to fully load.  
+[AShot](https://github.com/pazone/ashot) is used for the file comparison.  
 
