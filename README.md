@@ -23,14 +23,14 @@ URLs for your test can be put in the [src/test/java/URLs.java file](https://gith
 Basic Selenium set up can be put in [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
 
 Syntax for a full-page screenshot:
-minimal options with project default values:
+minimal options with project default values:  
 `Screenshot.fullpage(driver);` 
 Additional options are available
 
 
 Syntax to compare a full-page screenshot against the corresponding image in the "expected" folder:
-minimal options with project default values:
-`Screenshot.compareImage(driver);'
+minimal options with project default values:  
+`Screenshot.compareImage(driver);'  
  
 Additional options are available such as "pixelThreshold".
 
