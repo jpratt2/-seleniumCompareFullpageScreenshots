@@ -30,9 +30,11 @@ Additional options are available
 
 Syntax to compare a full-page screenshot against the corresponding image in the "expected" folder:
 minimal options with project default values:  
-`Screenshot.compareImage(driver);'  
+`Screenshot.compareImage(driver);`
  
-Additional options are available such as "pixelThreshold".
+An acceptance level can be set with "pixelThreshold". This provides an acceptable difference in pixels that can still be considered a match.  
+For example:
+`compareImage(driver, pixelThreshold)`
 
 **The file name will be the URL (with forbidden characters replaced by a dash).**
 
