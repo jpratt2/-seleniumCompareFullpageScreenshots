@@ -18,9 +18,9 @@ It comes with 2 test commands ready for Maven:
 
 **If there is any discrepancy between the expected and obverved images, a diff image with the difference highlighted in red will be put in the "diffs" folder.**
 
-URLs for your test can be put in the [src/test/java/URLs.java file](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/URLs.java).  
+URLs for your test should be put here: [src/test/java/URLs.java file](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/URLs.java).  
 
-Basic Selenium set up can be put in [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
+Basic Selenium set up: [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
 
 Syntax for a full-page screenshot:
 minimal options with project default values:  
