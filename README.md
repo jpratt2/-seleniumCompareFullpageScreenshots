@@ -2,7 +2,7 @@
 *for Java and Maven*
 
 
-This project is useful for site monitoring on production for any visual change.  
+This project is useful for website monitoring on production for any visual change.  
 
 It uses Selenium 4 to take full-page screenshots in Firefox. It compares a baseline image against a current image to generate a diff image with differences highlighted in red. If there is no difference, no diff image is made.
 
