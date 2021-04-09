@@ -42,5 +42,5 @@ An example of use:
 I recommend a delay for the page to fully load.  
 [AShot](https://github.com/pazone/ashot) is used for the file comparison.  
 
-It is necessary to check the diffs folder visually to see if there are any test errors.
+It is necessary to check the diffs folder visually to see if there are any test failures.
 
