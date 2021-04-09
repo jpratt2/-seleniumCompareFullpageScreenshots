@@ -2,7 +2,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
-
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -12,8 +11,12 @@ import java.nio.file.Paths;
 
 public class Screenshot {
 
-    //take a full page screenshot using Selenium 4 and Firefox
-    public static void fullpage(FirefoxDriver driver, String URL, String folder) {
+    /*
+        fullpage
+        use Selenium 4 and Firefox to take a full page screenshot
+     */
+    public static void fullpage(FirefoxDriver driver, String folder) {
+        String URL = driver.getCurrentUrl();
         byte[] imageBytes = ((FirefoxDriver)driver).getFullPageScreenshotAs(OutputType.BYTES); //source: https://stackoverflow.com/a/66859108/1691651
         String filename = Utilities.convertUrlToFileName(URL);
         String path = System.getProperty("user.dir");
@@ -24,22 +27,27 @@ public class Screenshot {
             e.printStackTrace();
         }
     }
-    public static void fullpage(FirefoxDriver driver, String URL){
-        fullpage(driver, URL,"expected");
-    }
     public static void fullpage(FirefoxDriver driver){
-        String URL = driver.getCurrentUrl();
-        fullpage(driver, URL);
+        fullpage(driver, "expected");
     }
 
-    //use AShot to compare these 2 images https://github.com/pazone/ashot
-    public static void compareImage(FirefoxDriver driver, String pathExpected, String pathObserved, String pathDiff, String URL, int pixelThreshold){
 
-        //take a fresh image
-        Screenshot.fullpage(driver, pathObserved);
+
+    /*
+        compareImage
+        use AShot to compare the current web page image against the baseline
+        https://github.com/pazone/ashot
+
+     */
+    public static void compareImage(FirefoxDriver driver, int pixelThreshold){
+        String pathExpected = "expected";
+        String pathObserved = "observed";
+        String pathDiff = "diffs";
+
+        String URL = driver.getCurrentUrl();
+        String fileName = Utilities.convertUrlToFileName(URL);
 
         //read data for baseline image (from the "expected" folder, typically)
-        String fileName = Utilities.convertUrlToFileName(URL);
         String pathToExpected = System.getProperty("user.dir") + File.separator + pathExpected + File.separator + fileName + ".png";
         BufferedImage imgExpected = null;
         try {
@@ -71,14 +79,8 @@ public class Screenshot {
             }
         }
     }
-    public static void compareImage(FirefoxDriver driver, int pixelThreshold){
-        String URL = driver.getCurrentUrl();
-        compareImage(driver, "expected", "observed", "diffs", URL, pixelThreshold);
-    }
     public static void compareImage(FirefoxDriver driver){
-        String URL = driver.getCurrentUrl();
-        int pixelThreshold = 0;
-        compareImage(driver, "expected", "observed", "diffs", URL, pixelThreshold);
+        compareImage(driver, 0);
     }
 
 }

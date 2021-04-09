@@ -1,5 +1,4 @@
 import org.junit.Test;
-import java.io.IOException;
 
 
 public class A_createBaselineTest extends Setup {

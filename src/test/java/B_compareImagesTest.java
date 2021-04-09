@@ -1,11 +1,5 @@
 import org.junit.Test;
-import ru.yandex.qatools.ashot.comparison.ImageDiff;
-import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public class B_compareImagesTest extends Setup{
     @Test
@@ -18,6 +12,5 @@ public class B_compareImagesTest extends Setup{
             Thread.sleep(3000);//wait for the page to fully load
             Screenshot.compareImage(driver);
         }
-
     }
 }
