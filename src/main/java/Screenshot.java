@@ -32,7 +32,6 @@ public class Screenshot {
     }
 
 
-
     /*
         compareImage
         use AShot to compare the current web page image against the baseline
@@ -46,6 +45,9 @@ public class Screenshot {
 
         String URL = driver.getCurrentUrl();
         String fileName = Utilities.convertUrlToFileName(URL);
+
+        //take a fresh full-page image and put it in the "observed" folder
+        Screenshot.fullpage(driver, "observed");
 
         //read data for baseline image (from the "expected" folder, typically)
         String pathToExpected = System.getProperty("user.dir") + File.separator + pathExpected + File.separator + fileName + ".png";
