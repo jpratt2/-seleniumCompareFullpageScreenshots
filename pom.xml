@@ -47,6 +47,13 @@
             <artifactId>selenium-shutterbug</artifactId>
             <version>1.4</version>
         </dependency> -->
+        <dependency>
+            <!-- https://github.com/bonigarcia/webdrivermanager -->
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>4.4.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>

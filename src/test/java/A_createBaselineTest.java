@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -8,8 +9,7 @@ public class A_createBaselineTest {
     public void createBaselineImages() throws InterruptedException {
         //create a full-page image of the URLs in URLs.list
 
-        //set-up
-        System.setProperty("webdriver.gecko.driver", "C:\\webdrivers\\geckodriver.exe");
+        WebDriverManager.firefoxdriver().setup();
 
         for(int i = 0; i < URLs.list.length; i++){
             FirefoxDriver driver = new FirefoxDriver();//start a new, fresh browser for each web page
