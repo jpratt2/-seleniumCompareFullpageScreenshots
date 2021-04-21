@@ -26,7 +26,7 @@ Basic syntax for a full-page screenshot:
 Basic syntax to compare a full-page screenshot against the corresponding image in the "expected" folder:  
 `Screenshot.compareImage(driver);`
  
-Additionally, the acceptance level can be set with a "pixelThreshold" value. 
+Additionally, the acceptance level can be set with a "pixelThreshold" value which is the amount of pixels that can be different and still be considered acceptable as a match. 
 For example:
 `Screenshot.compareImage(driver, 100)`
 
