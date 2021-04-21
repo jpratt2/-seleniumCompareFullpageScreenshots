@@ -43,5 +43,5 @@ I recommend a delay for the page to fully load.
 
 It is necessary to check the diffs folder visually to see if there are any test failures.  
 
-This can be run in a virtual machine.
+This project can be run in a virtual machine.
 
