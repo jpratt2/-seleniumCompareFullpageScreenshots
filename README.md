@@ -17,7 +17,7 @@ It comes with 2 tests ready for Maven:
 ## Create current images in the "observed" folder and diffs (if any) in the "diffs folder.  
 `mvn "-Dtest=B*" test`  
 
-
+---
 URLs for your test should be put here: [src/test/java/URLs.java file](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/URLs.java).  
 
 Basic Selenium set up: [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
