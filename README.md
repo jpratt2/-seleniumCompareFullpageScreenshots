@@ -20,8 +20,6 @@ It comes with 2 tests ready for Maven:
 ---
 URLs for your test should be put here: [src/test/java/URLs.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/URLs.java).  
 
-Basic Selenium set up: [src/test/java/Setup.java](https://github.com/jpratt2/seleniumCompareFullpageScreenshots/blob/master/src/test/java/Setup.java)
-
 Basic syntax for a full-page screenshot:  
 `Screenshot.fullpage(driver);` 
 
