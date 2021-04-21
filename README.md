@@ -14,7 +14,7 @@ It comes with 2 tests ready for Maven:
 `mvn "-Dtest=A*" test`  
 
 ---
-### Create current images in the "observed" folder and diffs (if any) in the "diffs folder.  
+### Create current images in the "observed" folder and diffs (if any) in the "diffs" folder.  
 `mvn "-Dtest=B*" test`  
 
 ---
