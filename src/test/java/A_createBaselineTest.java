@@ -11,10 +11,14 @@ public class A_createBaselineTest {
 
         WebDriverManager.firefoxdriver().setup();
 
-        for(int i = 0; i < URLs.list.length; i++){
+        //////***this variable can be set for a custom list for "retest", etc.*************
+        String[] urlList = URLs.mainList;
+        ////////////////////////////////////////////////////////////////////////////////////
+
+        for(int i = 0; i < urlList.length; i++){
             FirefoxDriver driver = new FirefoxDriver();//start a new, fresh browser for each web page
             driver.manage().window().maximize();
-            String URL = URLs.list[i];
+            String URL = urlList[i];
             driver.get(URL);
             Thread.sleep(3000); //wait for the page to fully load
             Screenshot.fullpage(driver);
