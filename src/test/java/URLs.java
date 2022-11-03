@@ -1,12 +1,29 @@
 public class URLs {
 
-    public static String[] mainList = {
-           "https://www.adobe.com/",
+    public static String[] list = {
+  
+	"https://adobe.com/acrobat.html"
 
-    };
 
-    public static String[] retest = {
-            "https://www.adobe.com/",
 
-    };
+};
+	
+
+	public static String[] listTwiceLoaded = {
+
+
+	};
+	
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////	
+	public static String[] retest = { 
+ 
+	
+	};
+
+	public static String[] retestTwiceLoaded = {
+
+
+	};
+
 }

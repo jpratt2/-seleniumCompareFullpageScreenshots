@@ -1,29 +1,17 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.Dimension;
 
 
 public class B_compareImagesTest {
     @Test
-    public void testAgainstBaseline() throws InterruptedException {
-        //create a full-page image of the URLs in the list, but this time in the "observed" folder
+    public void _01_testAgainstBaseline() {
+        //create a full-page image of the URLs in the list in the "observed" folder
 
-        WebDriverManager.firefoxdriver().setup();// set up the path to the driver
+        Library.UrlLoop(URLs.list,Screenshot::compareImage);
+        Library.UrlLoopTwiceLoaded(URLs.listTwiceLoaded,Screenshot::compareImage);
 
-        //////***this variable can be set for a custom list for "retest", etc.*************
-        String[] urlList = URLs.mainList;
-        ////////////////////////////////////////////////////////////////////////////////////
-
-        for (int i = 0; i < urlList.length; i++) {
-            FirefoxDriver driver = new FirefoxDriver();//start a new, fresh browser for each web page
-            driver.manage().window().maximize();
-            String URL = urlList[i];
-            driver.get(URL);
-            Thread.sleep(3000);//wait for the page to fully load
-            Screenshot.compareImage(driver);
-            driver.quit();
-
-        }
     }
+
 }
