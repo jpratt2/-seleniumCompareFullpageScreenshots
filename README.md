@@ -1,7 +1,7 @@
 # Selenium Compare Fullpage Screenshots
 *for Java and Maven*
 
-_**Update**_: see version 2 for use in Chrome and other screenshot tools 
+_**Update**_: see version 2 to use Chrome and various screenshot tools 
 https://github.com/jpratt2/seleniumCompareFullpageScreenshotsv2
 
 --- 
